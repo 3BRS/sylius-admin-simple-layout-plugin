@@ -1,0 +1,42 @@
+sylius_twig_hooks:
+    hooks:
+        '3brs.sylius_admin.simple.page':
+            sidebar:
+                template: '@SyliusAdmin/shared/crud/common/sidebar.html.twig'
+                priority: 200
+            navbar:
+                template: '@SyliusAdmin/shared/crud/common/navbar.html.twig'
+                priority: 100
+            content:
+                template: '@SyliusAdmin/shared/crud/common/content.html.twig'
+                priority: 0
+
+        '3brs.sylius_admin.simple.page.content':
+            flashes:
+                template: '@SyliusAdmin/shared/crud/common/content/flashes.html.twig'
+                priority: 300
+            header:
+                template: '@SyliusAdmin/shared/crud/common/content/header.html.twig'
+                priority: 200
+            custom:
+                template: '@ThreeBRSSyliusAdminSimpleLayoutPlugin/shared/content/custom.html.twig'
+                priority: 100
+            footer:
+                template: '@SyliusAdmin/shared/crud/common/content/footer.html.twig'
+                priority: -100
+
+        '3brs.sylius_admin.simple.page.content.header':
+            breadcrumbs:
+                template: '@SyliusAdmin/shared/crud/index/content/header/breadcrumbs.html.twig'
+                priority: 100
+            title_block:
+                template: '@SyliusAdmin/shared/crud/common/content/header/title_block.html.twig'
+                priority: 0
+
+        '3brs.sylius_admin.simple.page.content.header.title_block':
+            title:
+                template: '@ThreeBRSSyliusAdminSimpleLayoutPlugin/shared/content/simple_title.html.twig'
+                priority: 100
+            actions:
+                template: '@SyliusAdmin/shared/crud/common/content/header/title_block/actions.html.twig'
+                priority: 0

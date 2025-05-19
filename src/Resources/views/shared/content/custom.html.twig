@@ -1,0 +1,13 @@
+{% block custom %}
+	{% set custom_content = hookable_metadata.context.custom_content|default('') %}
+	{% set custom_hook = hookable_metadata.context.custom_hook %}
+	<div class="page-body">
+		<div class="container-xl">
+			{{ custom_content|raw }}
+			{% if custom_hook is not empty %}
+				{% hook custom_hook %}
+				{% hook custom_hook ~ '#javascript' %}
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}

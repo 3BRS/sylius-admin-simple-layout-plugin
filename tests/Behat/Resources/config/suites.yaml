@@ -1,0 +1,2 @@
+imports:
+    - suites/render_simple_admin_page.yaml

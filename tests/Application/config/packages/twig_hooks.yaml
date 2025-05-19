@@ -1,0 +1,14 @@
+sylius_twig_hooks:
+    hooks:
+        '3brs.sylius_admin.simple.page.content.custom':
+            'my_optional_custom_content_global_block':
+                template: 'twig_hooks/my_custom_content_rendered_on_every_custom_page.html.twig'
+            'my_optional_custom_content_global_javascript_block':
+                template: 'twig_hooks/my_custom_javascript_rendered_on_every_custom_page.html.twig'
+
+        # custom pages
+        '3brs.sylius_admin.simple.page.content.my_custom_hook_inside_simple_admin_page_hook_witch_should_have_shorter_name':
+            my_first_custom_block_witch_i_should_name_more_originally:
+                template: 'twig_hooks/my_custom_page/my_custom_first_block.html.twig'
+            my_second_custom_block_witch_i_should_name_more_originally:
+                template: 'twig_hooks/my_custom_page/my_custom_second_block.html.twig'

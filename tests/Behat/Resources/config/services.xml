@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <defaults public="true"/>
+
+        <service id="theebrs_sylius.shipment_export.behat.context.ui.admin.rendering_simple_page"
+                 class="Tests\ThreeBRS\SyliusAdminSimpleLayoutPlugin\Behat\Context\Ui\Admin\RenderingSimpleAdminPageContext">
+            <argument type="service" id="Tests\ThreeBRS\SyliusAdminSimpleLayoutPlugin\Behat\Page\Admin\SimpleAdminLayoutPageInterface"/>
+        </service>
+
+        <service id="Tests\ThreeBRS\SyliusAdminSimpleLayoutPlugin\Behat\Page\Admin\SimpleAdminLayoutPageInterface"
+                 class="Tests\ThreeBRS\SyliusAdminSimpleLayoutPlugin\Behat\Page\Admin\SimpleAdminLayoutPage" public="false"
+                 parent="sylius.behat.page.shop.page">
+        </service>
+
+    </services>
+</container>

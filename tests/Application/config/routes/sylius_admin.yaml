@@ -1,0 +1,8 @@
+sylius_admin:
+    resource: "@SyliusAdminBundle/Resources/config/routing.yml"
+    prefix: '/%sylius_admin.path_name%'
+
+threebrs_simple_admin_layout_page_plugin:
+    path: '/%sylius_admin.path_name%/my-custom-admin-simple-page'
+    defaults:
+        _controller: Tests\ThreeBRS\SyliusAdminSimpleLayoutPlugin\Controller\MyCustomAdminSimplePageController::index

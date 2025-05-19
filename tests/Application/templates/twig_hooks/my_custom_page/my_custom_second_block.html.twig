@@ -1,0 +1,13 @@
+{% set myCustomVariableFromController = hookable_metadata.context.myCustomVariableFromController %}
+{% set my_custom_variable_from_parent_template = hookable_metadata.context.my_custom_variable_from_parent_template %}
+
+Second!
+
+<div>
+    <div>And some given variable from controller:
+        <pre>{{ myCustomVariableFromController }}</pre>
+    </div>
+    <div>And some given variable from parent hookable template:
+        <pre>{{ my_custom_variable_from_parent_template }}</pre>
+    </div>
+</div>

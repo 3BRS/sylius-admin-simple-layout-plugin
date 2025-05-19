@@ -1,0 +1,14 @@
+default:
+    suites:
+        render_simple_admin_page:
+            contexts:
+                - sylius.behat.context.hook.doctrine_orm
+
+                - sylius.behat.context.transform.shared_storage
+
+                - sylius.behat.context.setup.admin_security
+
+                - theebrs_sylius.shipment_export.behat.context.ui.admin.rendering_simple_page
+
+            filters:
+                tags: "@rendering_simple_admin_page && @ui"

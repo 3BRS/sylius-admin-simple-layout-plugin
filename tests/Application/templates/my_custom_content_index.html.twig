@@ -1,0 +1,25 @@
+{% extends '@ThreeBRSSyliusAdminSimpleLayoutPlugin/shared/layout/simple.html.twig' %}
+
+{% block title %}My custom HTML <title>{% endblock %}
+
+{% block body %}
+
+    {# 'icon' is some icon for \Symfony\UX\Icons\Twig\UXIconRuntime::renderIcon, optional #}
+
+    {% hook [ '3brs.sylius_admin.simple.page' ] with {
+        'title' : 'My custom breadcrumb and page H1 title, mandatory',
+        'subtitle' : 'Some subtitle, optional',
+        'icon' : null,
+        'test_attribute' : 'Some helper name for tests, optional',
+        'custom_hook' : 'my_custom_hook_inside_simple_admin_page_hook_witch_should_have_shorter_name',
+        'my_custom_variable_from_parent_template': 'Just a test variable from parent template',
+    } %}
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+    // My custom global JS injected at the end of the page right before </body>
+    </script>
+{% endblock %}
