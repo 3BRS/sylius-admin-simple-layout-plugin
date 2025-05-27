@@ -61,6 +61,8 @@ a) Inject custom string content into your custom template, extending simple layo
 
 {% block title %}My custom HTML <title>{% endblock %}
 
+{% block body %}My custom HTML <body>{% endblock %}
+
 {% block javascripts %}
     {{ parent() }}
     <script>
