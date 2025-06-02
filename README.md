@@ -17,9 +17,11 @@ simple Twig Template Plugin
     </a>
 </h1>
 
-## Usage
+## Purpose
 
-Inject your custom content into admin template to get your content with Sylius 2 admin menu, header and footer.
+Reconstructed easy-to-use Sylius 1 admin Twig layout `@SyliusAdmin/layout.html.twig` for Sylius 2.
+
+_Injects your custom content into admin template to get your content with Sylius 2 admin menu, header and footer._
 
 ## Installation
 
